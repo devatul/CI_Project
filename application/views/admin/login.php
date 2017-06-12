@@ -34,13 +34,13 @@
 <body style="background-color:black;">
 
 <div class="wrapper">
-     
+
 
     <div class="content">
-      
+
 
         <div class="content">
-		
+
 		<br>
 		<br>
 		<br>
@@ -50,16 +50,16 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Admin login</h4>
-                             
+
                             </div>
                             <div class="content">
-							<?php 
+							<?php
 								if($this->session->flashdata('errmsg'))
 								{
 									echo $this->session->flashdata('errmsg');
 								}
 							?>
-                                <form method="post" action="<?php echo base_url('adminlogin/login');?>">
+                                <form method="post" action="<?php echo site_url('adminlogin/login');?>">
 									<div class="form-group">
 										<label for="email">Username:</label>
 										<input type="text" class="form-control" name="username">
@@ -68,26 +68,26 @@
 										<label for="pwd">Password:</label>
 										<input type="password" class="form-control" name="password">
 									</div>
-								  
+
 									<button type="submit" class="btn btn-default">Login</button>
 								</form>
 
-                                 
+
                             </div>
                         </div>
                     </div>
 
-                  
+
                 </div>
 
 
 
-               
+
             </div>
         </div>
 
 
-      
+
 
     </div>
 </div>

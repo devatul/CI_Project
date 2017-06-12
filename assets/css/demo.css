@@ -59,3 +59,36 @@
 .table-upgrade td:nth-child(3){
     text-align: center;
 }
+.down-icon {
+  margin-top: -8px;
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.show-passage-checkbox{
+  width: 100%;
+}
+.show-passage-checkbox label{
+  float: right;
+  cursor: pointer;
+}
+.option-block {
+  width: 100%;
+}
+.option-block .opt {
+  padding: 10px;
+}
+.opt-index {
+  font-weight: bold;
+}
+.p-0 {
+  padding: 0px;
+}
+.m-0 {
+  margin: 0px;
+}
+.add-question-button {
+  /*width: 20%;*/
+  float: right;
+}

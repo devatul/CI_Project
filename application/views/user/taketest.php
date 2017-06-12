@@ -25,7 +25,7 @@
 		<br>
 		<br>
 		<br>
-		
+
 		 <table class="table table-responsive table-bordered">
 			<tr>
 				<th><h3>Instructions<h3></th>
@@ -38,10 +38,10 @@
 					<input type="checkbox" > I've read all the instructions carefully and abide by them.
 					<br>
 					<br>
-					<button>Start Test</button>					
+					<button>Start Test</button>
 				</td>
 			</tr>
-		 </table>		 
+		 </table>
 	</div>
 </div>-->
 <div class="container-fluid">
@@ -53,13 +53,13 @@
                 <li><b>English laguange</b></li>
             </ul>
         </div>
-		<div class="col-sm-4">		 
-			<h3 class="pull-right"><b><?php echo $paper['paper_name'];?></b></h3></div>	
+		<div class="col-sm-4">
+			<h3 class="pull-right"><b><?php echo $paper['paper_name'];?></b></h3></div>
 		</div>
-	 
+
 	<div class="row">
-		<div class="col-md-8">			 
-			<?php 
+		<div class="col-md-8">
+			<?php
 				$i=0;
 				$j=0;
 				//echo $_SESSION['logged_id'];
@@ -74,16 +74,16 @@
 				<?php
 				$k=0;
 				foreach($ques as $x)
-				{					
+				{
 					?>
-					<form method="post" action="<?= base_url('paper/submittest');?>" id="testform">					
+					<form method="post" action="<?= site_url('paper/submittest');?>" id="testform">
 					<div class="col-sm-12" id="<?php echo $x['q_id'];?>" class="question" style="display:none;">
 						<div class="row" style="border:1px solid black;padding:10px;">
 							<b>Q.<?php echo ++$i;?></b>
 						</div>
 						<div class="row" style="min-height:510px;border:1px solid black;">
 							<div class="col-sm-7" style="min-height:509px;border:1px solid black;padding:10px;">
-								<?php 
+								<?php
 								if($x['q_passage']!='')
 								{
 									echo $x['q_passage'];
@@ -91,17 +91,17 @@
 								else
 								{
 									echo $x['q_name'];
-								}							
+								}
 								?>
 							</div>
 							<div class="col-sm-5">
 								<p>
-									<?php 
+									<?php
 										if($x['q_passage']!='')
 										{
 											echo $x['q_name'];
 										}
-																	
+
 									?>
 								</p>
 								<input type="hidden" name="paper_slug" value="<?php echo  $paper['paper_slug'];?>">
@@ -113,21 +113,21 @@
 								<label>(c). <input type="radio" name="ans_answer[<?= $k;?>]" class="ans<?php echo $x['q_id'];?>" value="c">	<?php echo $x['q_optionc'];?></label><br><br>
 								<label>(d). <input type="radio" name="ans_answer[<?= $k;?>]" class="ans<?php echo $x['q_id'];?>" value="d">	<?php echo $x['q_optiond'];?></label><br><br>
 								<label>(e). <input type="radio" name="ans_answer[<?= $k++;?>]" class="ans<?php echo $x['q_id'];?>" value="e">	<?php echo $x['q_optione'];?></label><br><br>
-								 
+
 							</div>
-							
+
 						</div>
 						<div class="row" style="border:1px solid black;padding:15px;">
 							<a class="btn btn-primary" style="border-radius:0px; margin-right:25px;" onClick="clearresponse();">Clear Response</a>
 							<!--<button class="btn btn-primary" style="border-radius:0px; margin-right:25px;">Mark For review & Next</button>-->
 							<a class="btn btn-primary" style="border-radius:0px; margin-right:25px;" onClick="shownext('<?php echo $q_id[$j];?>','<?php if(isset($q_id[++$j])){echo @$q_id[$j];}else{echo @$q_id['0'];}?>');">Save & Next</a>
 						</div>
-					</div>				
+					</div>
 			<?php
 				}
-				 	
+
 			?>
-			 
+
 		</div>
 		<div class="col-md-4 ">
 			<div class="row" style="border:2px solid gray;padding:8px;" >
@@ -148,7 +148,7 @@
 					</div>
 					<div class="col-md-9" style="padding-top:8px;">
 						Answered
-					</div>				
+					</div>
 				</div>
 				<div class="col-md-6"  style="margin:0px;padding:5px;">
 					<div class="col-md-3" style="margin:0px;padding:0px;">
@@ -156,7 +156,7 @@
 					</div>
 					<div class="col-md-9" style="padding-top:8px;">
 						Not Answered
-					</div>				
+					</div>
 				</div>
 				<div class="col-md-6"  style="margin:0px;padding:5px;">
 					<div class="col-md-3" style="margin:0px;padding:0px;">
@@ -164,7 +164,7 @@
 					</div>
 					<div class="col-md-9"style="padding-top:8px;">
 						Not Visited
-					</div>				
+					</div>
 				</div>
 				<div class="col-sm-6"  style="margin:0px;padding:5px;">
 					<div class="col-sm-3" style="margin:0px;padding:0px;">
@@ -172,18 +172,18 @@
 					</div>
 					<div class="col-sm-9" style="padding-top:8px;">
 						Marked For Review
-					</div>				
+					</div>
 				</div>
-				
+
 				<div class="col-sm-12"  style="margin:0px;padding:5px;">
 					<div class="col-sm-2" style="margin:0px;padding:0px;">
 						<div class="circle" style="background: violet; "><span id="">25</span></div>
 					</div>
 					<div class="col-sm-10" style="padding-top:8px;">
 						Answered and Marked For Review
-					</div>				
+					</div>
 				</div>
-			 
+
 			</div>
 			<div class="row"  style="border:1px solid black;margin-top:10px;padding:5px;">
 				<p style="font-size:20px;">Questions</p>
@@ -194,13 +194,13 @@
 					{
 						?>
 							<div class="col-md-2">
-								<div class="circle" onClick="showques('<?php echo $q_id[$r];?>');" id="qn<?php echo $x['q_id'];?>" style="background: gray; "><span id="" style="color:white;"><b><?php echo ++$s;?></b></span></div>									 
+								<div class="circle" onClick="showques('<?php echo $q_id[$r];?>');" id="qn<?php echo $x['q_id'];?>" style="background: gray; "><span id="" style="color:white;"><b><?php echo ++$s;?></b></span></div>
 							</div>
 						<?php
 						$r++;
 					}
-				?>				
-			</div>	 
+				?>
+			</div>
 			  <button type="button" class="btn btn-success btn-lg" data-toggle="modal" style="border-radius:0px;margin-top:20px;"data-target="#myModal">Submit Test</button>
 
 			  <!-- Modal -->
@@ -215,7 +215,7 @@
 					  <p><b>Do you really want to submit your test?</b></p>
 					</div>
 					<div class="modal-footer">
-					 
+
 					  <button type="submit" class="btn btn-primary">Yes</button>
 					  <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
 					  </form>
@@ -225,16 +225,16 @@
 			  </div>
 			</div>
 
-		
+
 	</div>
-	
+
 
 </div>
 
 </body>
 </html>
- 
- 
+
+
 <script>
 	$("#<?php echo $q_id['0'];?>").show();
 	function clearresponse()
@@ -260,12 +260,12 @@
 		//alert(count);
 		//alert(answered);
 		//alert(notanswered);
-	
-		
+
+
 	}
 	function showques(str1)
 	{
-		var x	=	$("#qdivid").val(); 
+		var x	=	$("#qdivid").val();
 		$("#"+x).hide();
 		$("#"+str1).show();
 		$("#qdivid").val(str1);
@@ -297,4 +297,3 @@
 		1000);
 	}
 	</script>
-	 

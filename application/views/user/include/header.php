@@ -23,13 +23,13 @@
 									<li class="dropdown dropdown-small">
 										<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">MY ACCOUNT<b class="caret"></b></a>
 										<ul class="dropdown-menu">
-											<li><a href="<?= base_url('myaccount/accountinfo');?>">ACCOUNT INFO</a></li>
-											<li><a href="<?= base_url('myaccount/changepassword');?>">CHANGE PASSWORD</a></li>
-											<li><a href="<?= base_url('test/mytestseries');?>">MY TEST SERIES</a></li>
+											<li><a href="<?= site_url('myaccount/accountinfo');?>">ACCOUNT INFO</a></li>
+											<li><a href="<?= site_url('myaccount/changepassword');?>">CHANGE PASSWORD</a></li>
+											<li><a href="<?= site_url('test/mytestseries');?>">MY TEST SERIES</a></li>
 											<li><a href="#">ORDER HISTORY</a></li>
 
 											<li class="divider"></li>
-											<li><a href="<?php echo base_url('logout');?>"><i class="fa fa-sign-out"></i> Logout</a></li>
+											<li><a href="<?php echo site_url('logout');?>"><i class="fa fa-sign-out"></i> Logout</a></li>
 
 										</ul>
 									</li>
@@ -298,7 +298,7 @@
 
 					}
 				}
-				xmlhttp.open("GET",'<?php echo base_url('login/checklogin');?>?user_email='+user_email+'&user_password='+user_password,true);
+				xmlhttp.open("GET",'<?php echo site_url('login/checklogin');?>?user_email='+user_email+'&user_password='+user_password,true);
 				xmlhttp.send();
 
 			}

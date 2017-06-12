@@ -16,29 +16,29 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="<?php echo base_url();?>userassets/css/owl.carousel.css">
 <link rel="stylesheet" href="<?php echo base_url();?>userassets/css/style.css">
-<link rel="stylesheet" href="<?php echo base_url();?>userassets/css/responsive.css">   
+<link rel="stylesheet" href="<?php echo base_url();?>userassets/css/responsive.css">
 </head>
 <body>
-   
+
     <?php include('include/header.php');?>
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <h1>My Test Series</h1>
-                </div>				 
+                </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
 				<ul class="nav nav-tabs">
 					<li class="active"><a data-toggle="tab" href="#home"><b>Paid Test Series</b></a></li>
-					<li><a data-toggle="tab" href="#menu1"><b>Practise Tests</b></a></li>					 
+					<li><a data-toggle="tab" href="#menu1"><b>Practise Tests</b></a></li>
 				</ul>
 				<div class="tab-content">
 					<div id="home" class="tab-pane fade in active">
@@ -51,7 +51,7 @@
 									<th>#</th>
 									<th>Test Series</th>
 									<th>Price</th>
-									 
+
 								</tr>
 							</thead>
 							<tbody>
@@ -64,9 +64,9 @@
 									?>
 									<tr>
 										<th><img src="<?php echo base_url();?>img/series/<?php echo $x['series_id'];?>/<?php echo $x['series_image'];?>" class="img img-responsive" style="height:150px;width:200px;"></th>
-										<th><?php echo $x['series_name'];?></th>									 
-										<th> 
-											<a href="<?php echo base_url('Test/viewpapers/'.$x['series_slug']);?>" style="border-radius:0px;" class="btn btn-warning btn-fill btn-block">View All Tests <i class="fa fa-chevron-right" aria-hidden="true"></i></a><br>
+										<th><?php echo $x['series_name'];?></th>
+										<th>
+											<a href="<?php echo site_url('Test/viewpapers/'.$x['series_slug']);?>" style="border-radius:0px;" class="btn btn-warning btn-fill btn-block">View All Tests <i class="fa fa-chevron-right" aria-hidden="true"></i></a><br>
  										</th>
 									</tr>
 									<?php
@@ -74,15 +74,15 @@
 								}
 								else
 								{
-									
+
 								}
 							?>
-							
+
 							</tbody>
-						</table> 
-					</div>					 
+						</table>
+					</div>
 				</div>
-				 
+
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
 <script>
 	function removecartitem(str,str2)
 	{
-				
+
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -113,7 +113,7 @@
 				{
 					var total		=	$('#total2').val();
 					var newtotal	=	total-str2;
-					
+
 					$('#total').html(newtotal);
 					$('#total2').val(newtotal);
 					$('#'+str).hide();
@@ -121,8 +121,8 @@
 			}
 		}
 		xmlhttp.open("GET",'<?php echo base_url('mycart/removeitem');?>?cart_id='+str,true);
-		xmlhttp.send();			
-		 
-		
+		xmlhttp.send();
+
+
 	}
 </script>

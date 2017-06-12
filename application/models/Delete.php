@@ -13,5 +13,17 @@
 				return false;
 			}
 		}
+		public function deletequestion($q_id)
+		{
+			if($this->db->where('q_id', $q_id)
+					->delete('ques'))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 	}
 ?>
