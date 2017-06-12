@@ -15,6 +15,7 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 <link href="<?php echo base_url();?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 <script src="<?php echo base_url();?>ckeditor/ckeditor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -30,37 +31,37 @@
 
             <ul class="nav">
                 <li class="">
-                    <a href="<?php echo base_url('admin/');?>">
+                    <a href="<?php echo site_url('admin');?>">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/course');?>">
+                    <a href="<?php echo site_url('admin/course');?>">
                         <i class="pe-7s-user"></i>
                         <p>Course Section</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/testseries');?>">
+                    <a href="<?php echo site_url('admin/testseries');?>">
                         <i class="pe-7s-note2"></i>
                         <p>Test Series Section</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/testpaper');?>">
+                    <a href="<?php echo site_url('admin/testpaper');?>">
                         <i class="pe-7s-news-paper"></i>
                         <p>Test Paper Section</p>
                     </a>
                 </li>
 				<li>
-                    <a href="<?php echo base_url('admin/dailyupdates');?>">
+                    <a href="<?php echo site_url('admin/dailyupdates');?>">
                         <i class="pe-7s-science"></i>
                         <p>Daily Updates</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/notifications');?>">
+                    <a href="<?php echo site_url('admin/notifications');?>">
                         <i class="pe-7s-map-marker"></i>
                         <p>Notifications</p>
                     </a>
@@ -155,7 +156,7 @@
                               </ul>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('admin/logout');?>">
+                            <a href="<?php echo site_url('admin/logout');?>">
                                 Log out
                             </a>
                         </li>

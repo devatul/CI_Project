@@ -8,7 +8,7 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">List Of Schools</h4>
-                                <p class="category"><a href="<?php echo base_url('admin/addcourse');?>"class="btn btn-primary btn-fill pull-right">Add a Course</a></p>
+                                <p class="category"><a href="<?php echo site_url('admin/addcourse');?>"class="btn btn-primary btn-fill pull-right">Add a Course</a></p>
                             </div>
                             <div class="content">
                                 <table class='table table-responsive table-striped'>
@@ -32,9 +32,9 @@
 															<td><?php echo ++$i;?></td>
 															<td><?php echo $x['course_name'];?></td>
 															<td><img src="<?php echo base_url();?>img/courses/<?php echo $x['course_id'];?>/<?php echo $x['course_image'];?>" class="img img-responsive" style="height:150px;width:200px;"></td>
-															 
+
 															<td>
-																<a href="<?php echo base_url('admin/editcourse/'.$x['course_id']);?>" class="btn btn-warning btn-fill">Edit</a>
+																<a href="<?php echo site_url('admin/editcourse/'.$x['course_id']);?>" class="btn btn-warning btn-fill">Edit</a>
 																<a href="" class="btn btn-danger btn-fill">Delete</a>
 															</td>
 														</tr>
@@ -51,17 +51,17 @@
 											}
 										 ?>
 									</tbody>
-								</table>                                 
+								</table>
                             </div>
                         </div>
                     </div>
 
-                     
+
                 </div>
 
 
 
-             
+
             </div>
         </div>
 

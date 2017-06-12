@@ -8,7 +8,7 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">List Of Test Series</h4>
-                                <p class="category"><a href="<?php echo base_url('admin/addseries');?>"class="btn btn-primary btn-fill pull-right">Add a Test Series</a></p>
+                                <p class="category"><a href="<?php echo site_url('admin/addseries');?>"class="btn btn-primary btn-fill pull-right">Add a Test Series</a></p>
                             </div>
                             <div class="content">
 							<?php
@@ -58,10 +58,10 @@
 																	}
 																?>
 															</td>
-															 
+
 															<td>
-																 
-																<a href="<?php echo base_url('admin/editseries/'.$x['series_id']);?>" class="btn btn-warning btn-fill btn-block">Edit</a><br>
+
+																<a href="<?php echo site_url('admin/editseries/'.$x['series_id']);?>" class="btn btn-warning btn-fill btn-block">Edit</a><br>
 																<a href="" class="btn btn-danger btn-fill btn-block">Delete</a>
 															</td>
 														</tr>
@@ -83,17 +83,17 @@
 											}
 										 ?>
 									</tbody>
-								</table>                                 
+								</table>
                             </div>
                         </div>
                     </div>
 
-                     
+
                 </div>
 
 
 
-             
+
             </div>
         </div>
 

@@ -18,47 +18,47 @@
 <link rel="stylesheet" href="<?php echo base_url();?>userassets/css/responsive.css">
 </head>
 <body>
-   
+
     <?php include('include/header.php');?>
     <div class="product-big-title-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <h1><?= @$paper[0]['series_name'] ?></h1>
-                </div>				 
+                </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
         <div class="container">
             <div class="row">
 				<table class="table table-striped table-responsive">
-				 
+
 				<tbody>
 				<?php
-					 
+
 					if(count($paper))
 					{
-						 
+
 						foreach($paper as $x)
 						{
 							?>
 							<tr>
 								<td><img src="<?php echo base_url('img/papers');?>/<?php echo $x['paper_id'];?>/<?php echo $x['paper_image'];?>" class="img img-responsive img-thumbnail" style="width:100px;height:100px;"></td>
- 								<td><b><?php echo $x['paper_name'];?></b> 
+ 								<td><b><?php echo $x['paper_name'];?></b>
 									<br><b>Duration: </b>
 									<?php echo $x['paper_duration'];?> Mins</td>
 								<td>
-									<a href="javascript:void(0);" onClick="window.open('<?php echo base_url('paper/taketest/'.$x['paper_slug']);?>', '', 'fullscreen=yes, scrollbars=auto');" style="border-radius:0px;" class="btn btn-primary btn-block">Start Test</a><br>
-									 
-									
+									<a href="javascript:void(0);" onClick="window.open('<?php echo site_url('paper/taketest/'.$x['paper_slug']);?>', '', 'fullscreen=yes, scrollbars=auto');" style="border-radius:0px;" class="btn btn-primary btn-block">Start Test</a><br>
+
+
 								</td>
-							</tr>								
-							<?php							 
-						} 
+							</tr>
+							<?php
+						}
 						echo "<tr><td colspan='3'>".$this->pagination->create_links()."</td></tr>";
 					}
 					else
@@ -68,7 +68,7 @@
 						<?php
 					}
 				?>
-				
+
 				</tbody>
 				</table>
             </div>
@@ -82,7 +82,7 @@
 <script>
 	function removecartitem(str,str2)
 	{
-				
+
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -101,7 +101,7 @@
 				{
 					var total		=	$('#total2').val();
 					var newtotal	=	total-str2;
-					
+
 					$('#total').html(newtotal);
 					$('#total2').val(newtotal);
 					$('#'+str).hide();
@@ -109,8 +109,8 @@
 			}
 		}
 		xmlhttp.open("GET",'<?php echo base_url('mycart/removeitem');?>?cart_id='+str,true);
-		xmlhttp.send();			
-		 
-		
+		xmlhttp.send();
+
+
 	}
 </script>
