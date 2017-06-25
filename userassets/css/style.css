@@ -257,3 +257,9 @@ transition-property: opacity;}
 .taketestup {background-color:rgba(128, 128, 128, 0.21);padding:10px;}
 .paperblock li {float: left;text-align: left;display: inline;background: #1abc9c;padding: 5px;margin-left: 10px;color: #fff;cursor: pointer;}
 .userimgtest {width:50px;height:50px;}
+.list-num{
+  float: left;
+  padding: 6px;
+  margin: 4px;
+  cursor: pointer;
+}

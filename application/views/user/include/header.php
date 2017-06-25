@@ -104,7 +104,10 @@
 
                         <li><a href="#">Correspondence Courses</a></li>
                         <li class="dropdown dropdown-small">
-							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">ClassRoom Program</span><b class="caret"></b></a>
+							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
+                <span class="key">ClassRoom Program</span>
+                <b class="caret"></b>
+              </a>
 							<ul class="dropdown-menu">
 								<li><a href="<?php echo base_url('dailyupdates');?>">Daily Updates</a></li>
 								<li><a href="<?php echo base_url('notifications');?>">Notifications</a></li>
@@ -256,7 +259,7 @@
 						setTimeout(function(){ location.reload(); }, 2000);
 					}
 				}
-				xmlhttp.open("GET",'<?php echo base_url('register/storeuser');?>?user_email='+user_email+'&user_name='+user_name+'&user_mobile='+user_mobile+'&user_password='+user_password,true);
+				xmlhttp.open("GET",'<?php echo site_url('register/storeuser');?>?user_email='+user_email+'&user_name='+user_name+'&user_mobile='+user_mobile+'&user_password='+user_password,true);
 				xmlhttp.send();
 
 			}
@@ -330,7 +333,7 @@
 
 				}
 			}
-			xmlhttp.open("GET",'<?php echo base_url('cart/addtocart');?>?cart_series_id='+str,true);
+			xmlhttp.open("GET",'<?php echo site_url('cart/addtocart');?>?cart_series_id='+str,true);
 			xmlhttp.send();
 		}
 

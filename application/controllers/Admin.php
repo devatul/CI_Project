@@ -458,7 +458,7 @@
 			}
 			$array['paper_slug']	=	$data;
 			 echo "<pre>";
-
+			//  print_r($array);
 			 $i=1;
 			 foreach($array['paper_section'] as $x)
 			 {
@@ -466,16 +466,19 @@
 				$i++;
 			 }
 			 $j=1;
+			 $totalQue=0;
 			 foreach($array['paper_section_que'] as $x)
 			 {
+				$totalQue = $totalQue + $x;
 				$array['paper_section_'.$j.'_que']	=$x;
 				$j++;
 			 }
-
+			 $array['paper_num_que'] = $totalQue;
+			 unset($array['chk']);
 			 unset($array['paper_section']);
 			 unset($array['paper_section_que']);
 
-			 print_r($array);
+			//  print_r($array);die;
 
 			 if($paper_id	=	$this->insert->insert_table($array,'test_paper'))
 			{

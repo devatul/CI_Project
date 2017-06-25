@@ -146,7 +146,6 @@
 			$q	=	$this->db->select('*')
 							->where($array)
 							->get('ques');
-							// print_r($q->num_rows());die;
 			if($q->num_rows() > 0)
 			{
 				return $q->result();
@@ -255,7 +254,20 @@
 							->get('daily_updates');
 			return $q->row_array();
 		}
-
+		public function get_test_result($array)
+		{
+			$q	=	$this->db->select('*')
+							->where($array)
+							->get('result');
+			if($q->num_rows() > 0)
+			{
+				return $q->result();
+			}
+			else
+			{
+				return false;
+			}
+		}
 
 	}
 ?>
