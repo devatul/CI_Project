@@ -1,37 +1,19 @@
-<footer class="footer">
-            <div class="container-fluid">
-               <!-- <nav class="pull-left">
+		<footer class="footer">
+            <div class="container-fluid col-md-12">
+               <nav class="pull-left">
                     <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Company
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                               Blog
-                            </a>
-                        </li>
+                        <li><a href="#">&copy; vbcadoni.com </a></li>
                     </ul>
-                </nav>-->
-                <p class="copyright pull-right">
-                    
+                </nav>
+                <nav class="pull-right">
+                  <ul>  
+                        <li><a href="www.isconic.com"> Website Designed By Isconic Technologies</a></li>
+                  </ul>
                 </p>
             </div>
         </footer>
     </div>
 </div>
-
 
 </body>
 <script src="<?php echo base_url();?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>

@@ -52,9 +52,6 @@ $(document).ready(function(){
                       echo "Edit Question";
                     } ?>
                 </b></span>
-                  <!--span class="down-icon" data-toggle="collapse" data-target="#formcontent" aria-expanded="false" aria-controls="formcontent">
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                  </span-->
                 </div>
                 <?php
                 echo validation_errors();

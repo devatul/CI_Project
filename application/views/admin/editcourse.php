@@ -1,6 +1,4 @@
 <?php include('header.php');?>
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -8,7 +6,6 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Edit A Course</h4>
-
                             </div>
                             <div class="content">
 								<?php
@@ -36,26 +33,13 @@
 											<img src="<?php echo base_url();?>img/courses/<?php echo $data['course_id'];?>/<?php echo $data['course_image'];?>" class="img img-responsive" style="width:200px;height:150px;">
 
 										</div>
-
-
 										</div>
-
 								  <button type="submit" class="btn btn-primary btn-fill">Submit</button>
 								</form>
-
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
             </div>
         </div>
-
-
         <?php include('footer.php');?>

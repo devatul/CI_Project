@@ -5,6 +5,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="<?php echo base_url();?>assets/img/favicon.ico">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MY CART | ONLINE TEST | VBCADONI</title>
@@ -38,8 +39,7 @@
                 </div>				 
             </div>
         </div>
-    </div>
-    
+    </div>  
     
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
@@ -66,7 +66,6 @@
             </div>
         </div>
     </div>
-
 
 	<?php include('include/footer.php');?>
   </body>
