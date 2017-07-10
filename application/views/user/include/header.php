@@ -145,6 +145,7 @@
                             <div class="tab-pane active" id="Registration">
                                 <form role="form" action="" class="form-horizontal">
 									<div id="regmsgbar"></div>
+                  <input type="hidden" id="reg_status" value="pending for approval" />
 									<div class="form-group">
 										<div class="col-sm-12">
 										  <input type="text" class="form-control" id="reg_name" placeholder="Name" />
@@ -212,6 +213,7 @@
 
 		function register()
 		{
+      var user_status		=	$('#reg_status').val();
 			var user_email		=	$('#reg_email').val();
 			var user_name		=	$('#reg_name').val();
 			var user_mobile		=	$('#reg_mobile').val();
@@ -259,7 +261,7 @@
 						setTimeout(function(){ location.reload(); }, 2000);
 					}
 				}
-				xmlhttp.open("GET",'<?php echo site_url('register/storeuser');?>?user_email='+user_email+'&user_name='+user_name+'&user_mobile='+user_mobile+'&user_password='+user_password,true);
+				xmlhttp.open("GET",'<?php echo site_url('register/storeuser');?>?user_email='+user_email+'&user_name='+user_name+'&user_mobile='+user_mobile+'&user_password='+user_password+'&user_status='+user_status,true);
 				xmlhttp.send();
 
 			}
@@ -288,7 +290,6 @@
 				{
 					if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
-
 						if(xmlhttp.responseText==1)
 						{
 							$('#logmsgbar').html("<div class='alert alert-success'><h5>Logged In!</h5></div>");
@@ -296,12 +297,12 @@
 						}
 						else
 						{
-							$('#logmsgbar').html("<div class='alert alert-danger'><h5>OOPS!.. Invalid Credentials</h5></div>");
+							$('#logmsgbar').html("<div class='alert alert-danger'><h5>"+xmlhttp.responseText+"</h5></div>");
 						}
 
 					}
 				}
-				xmlhttp.open("GET",'<?php echo site_url('login/checklogin');?>?user_email='+user_email+'&user_password='+user_password,true);
+				xmlhttp.open("GET",'<?php echo base_url('login/checklogin');?>?user_email='+user_email+'&user_password='+user_password,true);
 				xmlhttp.send();
 
 			}

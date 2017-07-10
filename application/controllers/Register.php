@@ -1,15 +1,16 @@
 <?php
 	class Register extends CI_Controller
 	{
-	 
+
 		public function storeuser()
 		{
-			$user_name		=	$this->input->get('user_name');			
+			$user_name		=	$this->input->get('user_name');
 			$user_email		=	$this->input->get('user_email');
 			$user_mobile	=	$this->input->get('user_mobile');
 			$user_password	=	$this->input->get('user_password');
-			$array			=	array(									 
-									'user_email'		=>		$user_email,								 
+			$user_status = $this->input->get('user_status');
+			$array			=	array(
+									'user_email'		=>		$user_email,
 								);
 			$this->load->model('insert');
 			$this->load->model('select');
@@ -24,6 +25,7 @@
 									'user_email'		=>		$user_email,
 									'user_mobile'		=>		$user_mobile,
 									'user_password'		=>		md5($user_password),
+									'user_status'		=>	$user_status
 								);
 				if($this->insert->insert_table($array,'users'))
 				{
@@ -32,24 +34,24 @@
 				else
 				{
 					echo"<div class='alert alert-danger'>System Error.</div>";
-				}	
+				}
 			}
-				
-			
+
+
 		}
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
 	}
-	
-	
+
+
 
 ?>

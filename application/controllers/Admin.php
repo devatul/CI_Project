@@ -614,6 +614,7 @@
 		public function submitquestion()
 		{
 			$this->load->library('form_validation');
+			$this->load->helper('upoloadimage');
 			$row	=	$this->input->post();
 			$array		=	array(
 									'q_paper_id'			=>		$row['q_paper_id'],
@@ -637,15 +638,67 @@
 				$this->form_validation->set_rules('q_optione', 'Option E', 'trim|required');
 				$this->form_validation->set_rules('q_answer', 'Answer', 'trim|required');
 
-				if($this->form_validation->run() && $this->insert->insert_table($array,'ques')) {
+				if($this->form_validation->run() && $insert_id = $this->insert->insert_table($array,'ques')) {
+					$target_dir = "./img/questions/$insert_id/";
+					if($_FILES['question_img']){
+						$q_img_path = uploadImg($target_dir, $_FILES['question_img'], 'Q'.$insert_id.'_que_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_image'=>$q_img_path]);
+					}
+					if($_FILES['option_a_img']) {
+						$opt_a_img_path = uploadImg($target_dir, $_FILES['option_a_img'], 'Q'.$insert_id.'_option_a_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_optiona_img'=>$opt_a_img_path]);
+					}
+					if($_FILES['option_b_img']) {
+						$opt_b_img_path = uploadImg($target_dir, $_FILES['option_b_img'], 'Q'.$insert_id.'_option_b_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_optionb_img'=>$opt_b_img_path]);
+					}
+					if($_FILES['option_c_img']) {
+						$opt_c_img_path = uploadImg($target_dir, $_FILES['option_c_img'], 'Q'.$insert_id.'_option_c_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_optionc_img'=>$opt_c_img_path]);
+					}
+					if($_FILES['option_d_img']) {
+						$opt_d_img_path = uploadImg($target_dir, $_FILES['option_d_img'], 'Q'.$insert_id.'_option_d_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_optiond_img'=>$opt_d_img_path]);
+					}
+					if($_FILES['option_e_img']) {
+						$opt_e_img_path = uploadImg($target_dir, $_FILES['option_e_img'], 'Q'.$insert_id.'_option_e_img');
+						$this->update->update_table('ques', 'q_id', $insert_id, ['q_optione_img'=>$opt_e_img_path]);
+					}
 					$this->session->set_flashdata('errmsg','<div class="alert alert-success">Questions Added.</div>');
 				}
-			return redirect('admin/addquestion/'.$row['q_paper_id']);
+				return redirect('admin/addquestion/'.$row['q_paper_id']);
 		}
 
 		public function updatequestion() {
 			$this->load->library('form_validation');
+			$this->load->helper('upoloadimage');
 			$row	=	$this->input->post();
+			$qId = $row['q_id'];
+			$target_dir = "img/questions/$qId/";
+			if($_FILES['question_img']){
+				$q_img_path = uploadImg($target_dir, $_FILES['question_img'], 'Q'.$qId.'_que_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_image'=>$q_img_path]);
+			}
+			if($_FILES['option_a_img']) {
+				$opt_a_img_path = uploadImg($target_dir, $_FILES['option_a_img'], 'Q'.$qId.'_option_a_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_optiona_img'=>$opt_a_img_path]);
+			}
+			if($_FILES['option_b_img']) {
+				$opt_b_img_path = uploadImg($target_dir, $_FILES['option_b_img'], 'Q'.$qId.'_option_b_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_optionb_img'=>$opt_b_img_path]);
+			}
+			if($_FILES['option_c_img']) {
+				$opt_c_img_path = uploadImg($target_dir, $_FILES['option_c_img'], 'Q'.$qId.'_option_c_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_optionc_img'=>$opt_c_img_path]);
+			}
+			if($_FILES['option_d_img']) {
+				$opt_d_img_path = uploadImg($target_dir, $_FILES['option_d_img'], 'Q'.$qId.'_option_d_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_optiond_img'=>$opt_d_img_path]);
+			}
+			if($_FILES['option_e_img']) {
+				$opt_e_img_path = uploadImg($target_dir, $_FILES['option_e_img'], 'Q'.$qId.'_option_e_img');
+				// $this->update->update_table('ques', 'q_id', $insert_id, ['q_optione_img'=>$opt_e_img_path]);
+			}
 			$array		=	array(
 									'q_paper_id'			=>		$row['q_paper_id'],
 									'q_paper_section'	=>		$row['q_section'],
@@ -658,6 +711,12 @@
 									'q_optiond'				=>		$row['q_optiond'],
 									'q_optione'				=>		$row['q_optione'],
 									'q_answer'				=>		$row['q_answer'],
+									'q_image'					=>		$q_img_path,
+									'q_optiona_img'=>$opt_a_img_path,
+									'q_optionb_img'=>$opt_b_img_path,
+									'q_optionc_img'=>$opt_c_img_path,
+									'q_optiond_img'=>$opt_d_img_path,
+									'q_optione_img'=>$opt_e_img_path
 								);
 				$this->form_validation->set_rules('q_index', 'Index', 'trim|required');
 				$this->form_validation->set_rules('q_name', 'Question', 'trim|required');
@@ -668,10 +727,10 @@
 				$this->form_validation->set_rules('q_optione', 'Option E', 'trim|required');
 				$this->form_validation->set_rules('q_answer', 'Answer', 'trim|required');
 
-				if($this->form_validation->run() && $this->update->update_table('ques', 'q_id', $row['q_id'], $array)) {
+				if($this->form_validation->run() && $this->update->update_table('ques', 'q_id', $qId, $array)) {
 					$this->session->set_flashdata('errmsg','<div class="alert alert-success">Questions updated successfully.</div>');
 				}
-			return redirect('admin/addquestion/'.$row['q_paper_id'].'/'.$row['q_id']);
+			return redirect('admin/addquestion/'.$row['q_paper_id'].'/'.$qId);
 		}
 
 		public function deletequestion()
@@ -725,26 +784,26 @@
 			$this->session->set_flashdata('notificationsmsg','<div class="alert alert-success">Data Uodated successfully.</div>');
 			return redirect('admin/notifications');
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		public function manageusers()
+		{
+			$users	=		$this->select->get_all_users();
+			$this->load->view('admin/users', ['users'	=>	$users]);
+		}
+		public function updateUser() {
+			$userdata	=	$this->input->post();
+			$userId = $userdata['user_id'];
+			$array		=	array(
+									'user_name'		=>		$userdata['user_name'],
+									'user_email'	=>		$userdata['user_email'],
+									'user_mobile'	=>		$userdata['user_mobile'],
+									'user_status'	=>		$userdata['user_status'],
+								);
+			if($this->update->update_table('users', 'user_id', $userId, $array))
+			{
+				$user	=		$this->select->get_one_user(array('user_id' => $userId));
+				echo json_encode($user);
+			}
+		}
 	}
 
 ?>

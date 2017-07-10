@@ -191,12 +191,13 @@
 
 		public function checkuser($array)
 		{
-			$q	=	$this->db->select('user_id')
+			$q	=	$this->db->select('*')
 							->where($array)
 							->get('users');
-			if($row=$q->unbuffered_row())
+			if($q->num_rows() > 0)
 			{
-				return $row->user_id;
+				// echo $row;die;
+				return $q->result()[0];//->user_id;
 			}
 			else
 			{
@@ -259,6 +260,19 @@
 			$q	=	$this->db->select('*')
 							->where($array)
 							->get('result');
+			if($q->num_rows() > 0)
+			{
+				return $q->result();
+			}
+			else
+			{
+				return false;
+			}
+		}
+		public function get_all_users()
+		{
+			$q	=	$this->db->select('*')
+							->get('users');
 			if($q->num_rows() > 0)
 			{
 				return $q->result();

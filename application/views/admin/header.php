@@ -54,7 +54,13 @@
                         <p>Test Paper Section</p>
                     </a>
                 </li>
-				<li>
+                <li>
+                    <a href="<?php echo site_url('admin/manageusers');?>">
+                        <i class="pe-7s-note2"></i>
+                        <p>Manage Users</p>
+                    </a>
+                </li>
+				        <li>
                     <a href="<?php echo site_url('admin/dailyupdates');?>">
                         <i class="pe-7s-science"></i>
                         <p>Daily Updates</p>

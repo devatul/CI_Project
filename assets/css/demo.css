@@ -92,3 +92,25 @@
   /*width: 20%;*/
   float: right;
 }
+.upload-img-con {
+  width: 40px;
+  height: 40px;
+  float: right;
+  border: 2px solid green;
+  border-radius: 50%;
+  padding: 6px;
+  overflow: hidden;
+}
+.upload-img-con .fa-upload{
+  color: green;
+  font-size: 25px;
+}
+.upload-img-con input[type='file']{
+  position: absolute;
+  margin-top: -43px;
+  margin-left: -15px;
+  opacity: 0;
+  cursor: pointer;
+  padding-left: 70px;
+  padding-top: 23px;
+}
