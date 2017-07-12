@@ -53,9 +53,7 @@
 									<br><b>Duration: </b>
 									<?php echo $x['paper_duration'];?> Mins</td>
 								<td>
-									<a href="javascript:void(0);" onClick="window.open('<?php echo site_url('paper/taketest/'.$x['paper_slug']);?>', '', 'fullscreen=yes, scrollbars=auto');" style="border-radius:0px;" class="btn btn-primary btn-block">Start Test</a><br>
-
-
+									<a href="javascript:void(0);" onClick="openTest(<?php echo $x['paper_id']; ?>)" style="border-radius:0px;" class="btn btn-primary btn-block">Start Test</a><br>
 								</td>
 							</tr>
 							<?php
@@ -75,12 +73,40 @@
             </div>
         </div>
     </div>
+		<!-- Modal -->
+		<div class="modal fade" id="instructionModal" role="dialog">
+			<div class="modal-dialog modal-md">
+				<div class="modal-content">
+					<div class="modal-body" id="instruction" style="font-size: 18px;">
 
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onClick="window.open('<?php echo site_url('paper/taketest/'.$x['paper_slug']);?>', '', 'fullscreen=yes, scrollbars=auto');">Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<?php include('include/footer.php');?>
   </body>
 </html>
 <script>
+function openTest (paperId) {
+	$.ajax({
+		url: "<?php echo site_url('Test/startTest');?>",
+		method: "POST",
+		data: {paperId: paperId},
+		success: function(result){
+			if (result) {
+				$('#instruction').html(result);
+				$('#instructionModal').modal('show');
+			} else {
+				alert('You have taken this test. \n Thank You!');
+			}
+		}
+	});
+}
 	function removecartitem(str,str2)
 	{
 

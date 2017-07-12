@@ -110,7 +110,7 @@
                     </ul>
                 </div>
             </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -215,7 +215,7 @@
 			var user_password	=	$('#reg_password').val();
 			var user_cpassword	=	$('#reg_cpassword').val();
 			var len				=	user_password.length;
-			
+
 			if(user_email=='' || user_name=='' || user_mobile=='' ||user_password=='' || user_cpassword=='')
 			{
 				$('#regmsgbar').html('<div class="alert alert-danger">Please Fill all the fields.</div>');
@@ -281,6 +281,7 @@
 						{
 							$('#logmsgbar').html("<div class='alert alert-success'><h5>Logged In!</h5></div>");
 							setTimeout(function(){ location.reload(); }, 2000);
+              window.location = '<?php echo base_url(); ?>test/mytestseries';
 						}
 						else
 						{
