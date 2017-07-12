@@ -282,6 +282,18 @@
 				return false;
 			}
 		}
-
+		public function checkTestTaken($array) {
+			$q	=	$this->db->select('*')
+							->where($array)
+							->get('result');
+			if($q->num_rows() > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 	}
 ?>

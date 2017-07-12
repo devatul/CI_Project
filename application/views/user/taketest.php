@@ -5,9 +5,10 @@
 ?>
 <html lang="en">
 <head>
-<title>ONLINE TEST | VBCADONI</title>
+<link rel="icon" type="image/png" href="<?php echo base_url();?>assets/img/favicon.ico">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONLINE TEST | VBCADONI</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -170,7 +171,7 @@ $(document).ready(function(){
 						</div>
 				</div>
 
-				<button type="button" class="btn btn-success btn-lg" data-backdrop="static" data-toggle="modal" onclick="confirmSubmit(false);" style="border-radius:0px;margin-top:20px;"data-target="#myModal">Submit Test</button>
+				<button type="button" class="btn btn-success btn-lg" data-backdrop="static" data-toggle="modal" onClick="confirmSubmit(false);" style="border-radius:0px;margin-top:20px;"data-target="#myModal">Submit Test</button>
 				<!-- Modal -->
 				<div class="modal fade" id="myModal" role="dialog">
 					<div class="modal-dialog modal-sm">
@@ -179,7 +180,7 @@ $(document).ready(function(){
 
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" onclick="saveTest(true);">Submit</button>
+								<button type="button" class="btn btn-primary" onClick="saveTest(true);">Submit</button>
 								<button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
 							</div>
 						</div>

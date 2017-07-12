@@ -1,14 +1,11 @@
 <?php include('header.php');?>
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Notifications</h4>
-
+                            <h4 class="title">Notifications</h4>
                             </div>
                             <div class="content">
 								<?php
@@ -26,24 +23,12 @@
 											<input type="hidden" class="form-control" required name="update_id" value="<?php echo $update['update_id'];?>">
 										</div>
 									</div>
-
-
 								  <button type="submit" class="btn btn-primary btn-fill">Submit</button>
 								</form>
-
-
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
             </div>
         </div>
-
-
         <?php include('footer.php');?>

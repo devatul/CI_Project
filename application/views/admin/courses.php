@@ -1,13 +1,11 @@
 <?php include('header.php');?>
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">List Of Schools</h4>
+                                <h4 class="title">List Of Exams</h4>
                                 <p class="category"><a href="<?php echo site_url('admin/addcourse');?>"class="btn btn-primary btn-fill pull-right">Add a Course</a></p>
                             </div>
                             <div class="content">

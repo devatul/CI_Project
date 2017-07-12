@@ -1,6 +1,4 @@
 <?php include('header.php');?>
-
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -29,14 +27,10 @@
 
 								  <button type="submit" class="btn btn-primary btn-fill">Submit</button>
 								</form>
-
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <?php include('footer.php');?>

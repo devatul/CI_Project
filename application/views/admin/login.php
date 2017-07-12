@@ -1,118 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
-
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-
-
-    <!-- Bootstrap core CSS     -->
-    <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Animation library for notifications   -->
-    <link href="<?php echo base_url();?>assets/css/animate.min.css" rel="stylesheet"/>
-
-    <!--  Light Bootstrap Table core CSS    -->
-    <link href="<?php echo base_url();?>assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
-
-
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="<?php echo base_url();?>assets/css/demo.css" rel="stylesheet" />
-
-
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="<?php echo base_url();?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>ADMIN | VBCADONI</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="<?php echo base_url();?>assets/css/animate.min.css" rel="stylesheet"/>
+<link href="<?php echo base_url();?>assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+<link href="<?php echo base_url();?>assets/css/demo.css" rel="stylesheet" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+<link href="<?php echo base_url();?>assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 </head>
 <body style="background-color:black;">
-
 <div class="wrapper">
-
-
     <div class="content">
-
-
-        <div class="content">
-
-		<br>
-		<br>
-		<br>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Admin login</h4>
-
-                            </div>
-                            <div class="content">
-							<?php
-								if($this->session->flashdata('errmsg'))
-								{
-									echo $this->session->flashdata('errmsg');
-								}
-							?>
-                                <form method="post" action="<?php echo site_url('adminlogin/login');?>">
-									<div class="form-group">
-										<label for="email">Username:</label>
-										<input type="text" class="form-control" name="username">
-									</div>
-									<div class="form-group">
-										<label for="pwd">Password:</label>
-										<input type="password" class="form-control" name="password">
-									</div>
-
-									<button type="submit" class="btn btn-default">Login</button>
-								</form>
-
-
-                            </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="card" style="margin-top:100px;">
+                        <div class="header"><h4 class="title text-center">VBCADONI LOGIN</h4></div>
+                        <div class="content">
+                        <?php
+                            if($this->session->flashdata('errmsg'))
+                            {
+                                echo $this->session->flashdata('errmsg');
+                            }
+                        ?>
+                            <form method="post" action="<?php echo site_url('adminlogin/login');?>">
+                                <div class="form-group">
+                                    <label for="email">Username:</label>
+                                    <input type="text" class="form-control" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" name="password">
+                                </div>
+								<div class="text-center">
+                                	<button type="submit" class="btn btn-default">Login</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-
-
                 </div>
-
-
-
-
             </div>
         </div>
-
-
-
-
     </div>
 </div>
-
-
 </body>
     <!--   Core JS Files   -->
     <script src="<?php echo base_url();?>assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="<?php echo base_url();?>assets/js/bootstrap-checkbox-radio-switch.js"></script>
-
-	<!--  Charts Plugin -->
 	<script src="<?php echo base_url();?>assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
     <script src="<?php echo base_url();?>assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 	<script src="<?php echo base_url();?>assets/js/light-bootstrap-dashboard.js"></script>
-
-	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 	<script src="<?php echo base_url();?>assets/js/demo.js"></script>
 </html>

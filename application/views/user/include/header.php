@@ -5,10 +5,13 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key"> <i class="fa fa-phone" aria-hidden="true"></i> +91-7981858158</span></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
+                                <span class="key"> <i class="fa fa-phone" aria-hidden="true"></i> +91-7981858158</span></a>
                             </li>
-
-
+                            <li class="dropdown dropdown-small">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
+                                <span class="key"> <i class="fa fa-envelope" aria-hidden="true"></i>info@vbcadoni.com</span></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -21,7 +24,8 @@
 							{
 								?>
 									<li class="dropdown dropdown-small">
-										<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">MY ACCOUNT<b class="caret"></b></a>
+										<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
+                                        <span class="key">MY ACCOUNT</span><b class="caret"></b></a>
 										<ul class="dropdown-menu">
 											<li><a href="<?= site_url('myaccount/accountinfo');?>">ACCOUNT INFO</a></li>
 											<li><a href="<?= site_url('myaccount/changepassword');?>">CHANGE PASSWORD</a></li>
@@ -52,16 +56,40 @@
     </div> <!-- End header area -->
 
     <div class="site-branding-area">
-        <div class="container" style="height:62px;">
-            <div class="row" style="padding:0px;">
-                <div class="col-sm-6" style="margin:0px;padding:0px;">
-
-                        <h1><a href="<?php echo base_url();?>"><img src="<?php echo base_url('img/logo.jpg');?>" style="height:60px;" class="img img-responsive"/></a></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                        <h1><a href="<?php echo base_url();?>">
+                        <img src="<?php echo base_url('img/logo.jpg');?>" style="height:100px;" class="img img-responsive"/></a> </h1>
 
                 </div>
 
-                <div class="col-sm-6" style="margin:0px;padding:0px;">
-                    <div class="shopping-item"style="margin:7px;">
+                <div class="col-md-9">
+                <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="<?php echo base_url();?>">Home</a></li>
+						<li><a href="<?= base_url('testseries');?>">Test Series</a></li>
+                        <li><a href="#">Correspondence Courses</a></li>
+                        <li class="dropdown dropdown-small">
+							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
+                			<span class="key">ClassRoom Program</span>
+                			<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="<?php echo base_url('dailyupdates');?>">Daily Updates</a></li>
+								<li><a href="<?php echo base_url('notifications');?>">Notifications</a></li>
+							</ul>
+						</li>
+                        <li>
+                        	<div class="shopping-item"style="margin:7px;">
 						<?php
 							if(isset($_SESSION['logged_id']))
 							{
@@ -78,48 +106,15 @@
 						?>
 
                     </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
                 </div>
             </div>
         </div>
     </div> <!-- End site branding area -->
-
-    <div class="mainmenu-area">
-        <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="<?php echo base_url();?>">Home</a></li>
-                        <!--
-						<li><a href="<?= base_url('courses');?>">Courses</a></li>
-                        -->
-						<li><a href="<?= base_url('testseries');?>">Test Series</a></li>
-
-                        <li><a href="#">Correspondence Courses</a></li>
-                        <li class="dropdown dropdown-small">
-							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#">
-                <span class="key">ClassRoom Program</span>
-                <b class="caret"></b>
-              </a>
-							<ul class="dropdown-menu">
-								<li><a href="<?php echo base_url('dailyupdates');?>">Daily Updates</a></li>
-								<li><a href="<?php echo base_url('notifications');?>">Notifications</a></li>
-							</ul>
-						</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End mainmenu area -->
-
 
 	<!------------------------------------Modal Section---------------------------------------->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
@@ -220,14 +215,6 @@
 			var user_password	=	$('#reg_password').val();
 			var user_cpassword	=	$('#reg_cpassword').val();
 			var len				=	user_password.length;
-			/*
-			alert(user_email);
-			alert(user_name);
-			alert(user_mobile);
-			alert(user_password);
-			alert(user_cpassword);
-			*/
-
 
 			if(user_email=='' || user_name=='' || user_mobile=='' ||user_password=='' || user_cpassword=='')
 			{
@@ -294,6 +281,7 @@
 						{
 							$('#logmsgbar').html("<div class='alert alert-success'><h5>Logged In!</h5></div>");
 							setTimeout(function(){ location.reload(); }, 2000);
+              window.location = '<?php echo base_url(); ?>test/mytestseries';
 						}
 						else
 						{

@@ -39,7 +39,7 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <div class="single-slide">
-                        <div class="slide-bg slide-one"  style="background :url(<?= base_url('img/banner/Banner-1.png');?>);"></div>
+                        <div class="slide-bg slide-one"  style="background :url(<?= base_url('userassets/img/banner/banner1.png');?>);"></div>
                         <div class="slide-text-wrapper">
                             <div class="slide-text">
                                 <div class="container">
@@ -47,9 +47,9 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>We are awesome</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolorem, excepturi. Dolore aliquam quibusdam ut quae iure vero exercitationem ratione!</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ab molestiae minus reiciendis! Pariatur ab rerum, sapiente ex nostrum laudantium.</p>
-                                                <a href="" class="readmore">Learn more</a>
+                                                <p>Vbcadoni offers a unique IIT Foundation programme aimed at students of the classes 7th, 8th, 9th and 10th. This programme focuses on strengthening the student's conceptual clarity of the fundamentals in Mathematics, Physics and Chemistry</p>
+                                                <p>We are planning to continue its aggressive growth rate by adding new courses to its product portfolio and increasing its market penetration by enhanced geographical spread.</p>
+                                                <a href="" class="readmore">Contact Us</a>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="item">
                     <div class="single-slide">
-                        <div class="slide-bg slide-two"  style="background :url(<?= base_url('img/banner/Education-2.jpg');?>);"></div>
+                        <div class="slide-bg slide-two"  style="background :url(<?= base_url('userassets/img/banner/banner2.jpg');?>);"></div>
                         <div class="slide-text-wrapper">
                             <div class="slide-text">
                                 <div class="container">
@@ -68,8 +68,8 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>We are great</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aspernatur, dolorum harum molestias tempora deserunt voluptas possimus quos eveniet, vitae voluptatem accusantium atque deleniti inventore. Enim quam placeat expedita! Quibusdam!</p>
-                                                <a href="" class="readmore">Learn more</a>
+                                                <p>This program offers a structured preparation with a personalised learning plan mapped to your strengths and weaknesses.</p>
+                                                <a href="" class="readmore">Send Enquiry</a>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="item">
                     <div class="single-slide">
-                        <div class="slide-bg slide-three"  style="background :url(<?= base_url('img/banner/Education-4.jpg');?>);"></div>
+                        <div class="slide-bg slide-three"  style="background :url(<?= base_url('userassets/img/banner/banner3.jpg');?>);"></div>
                         <div class="slide-text-wrapper">
                             <div class="slide-text">
                                 <div class="container">
@@ -88,9 +88,8 @@
                                         <div class="col-md-6 col-md-offset-6">
                                             <div class="slide-content">
                                                 <h2>We are superb</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eius?</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptates necessitatibus dicta recusandae quae amet nobis sapiente explicabo voluptatibus rerum nihil quas saepe, tempore error odio quam obcaecati suscipit sequi.</p>
-                                                <a href="" class="readmore">Learn more</a>
+                                                <p>We offer a structured preparation with a personalised learning plan mapped to your strengths and weaknesses.</p>
+                                                <a href="" class="readmore">Become A Member</a>
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +139,7 @@
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
+                                    <img src="<?php echo base_url();?>userassets/img/18.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -155,7 +154,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo base_url();?>userassets/img/Payment Bank Mains.png" alt="">
+                                    <img src="<?php echo base_url();?>userassets/img/19.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -169,7 +168,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo base_url();?>userassets/img/26.png" alt="">
+                                    <img src="<?php echo base_url();?>userassets/img/20.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -199,7 +198,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo base_url();?>userassets/img/20.png" alt="">
+                                    <img src="<?php echo base_url();?>userassets/img/22.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -214,7 +213,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="<?php echo base_url();?>userassets/img/18 IDBI.png" alt="">
+                                    <img src="<?php echo base_url();?>userassets/img/23.png" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -242,14 +241,12 @@
                     <div class="brand-wrapper">
                         <h2 class="section-title">Popular Correspondence Courses</h2>
                         <div class="brand-list">
-                            
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-                            <img src="<?php echo base_url();?>userassets/img/SBI PO Mains Test Series Add.png" alt="">
-           >                            
+                            <img src="<?php echo base_url();?>userassets/img/18.png" alt="">
+                            <img src="<?php echo base_url();?>userassets/img/19.png" alt="">
+                            <img src="<?php echo base_url();?>userassets/img/20.png" alt="">
+                            <img src="<?php echo base_url();?>userassets/img/21.png" alt="">
+                            <img src="<?php echo base_url();?>userassets/img/22.png" alt="">
+                            <img src="<?php echo base_url();?>userassets/img/23.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -272,12 +269,9 @@
 				<div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
 				  <!-- Carousel indicators -->
                   <ol class="carousel-indicators">
-				    <li data-target="#fade-quote-carousel" data-slide-to="0"></li>
+				    <li data-target="#fade-quote-carousel" data-slide-to="0"  class="active"></li>
 				    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
-				    <li data-target="#fade-quote-carousel" data-slide-to="2" class="active"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
-                    <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
+				    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
 				  </ol>
 				  <!-- Carousel items -->
 				  <div class="carousel-inner">
@@ -290,33 +284,15 @@
 				    <div class="item">
                         <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
 				    	<blockquote>
-				    		<p>Career Power is a platform where I was able to groom my quantitative and qualitative skills which helped me all the way till I able to get selected. Faculty here is very supportive and friendly. Their 24x7 guidance and knowledge base sharing did wonders to me. Credit for this successful journey goes to Career Power. I would Suggest, if one is keen on going into banking field, then Career Power is a sure shot stop. Thank you Career Power.</p>
+				    		<p>Vbcadoni is a platform where I was able to groom my quantitative and qualitative skills which helped me all the way till I able to get selected. Faculty here is very supportive and friendly. Their 24x7 guidance and knowledge base sharing did wonders to me. Credit for this successful journey goes to Vbcadoni. I would Suggest, if one is keen on going into banking field, then Vbcadoni is a sure shot stop. Thank you Vbcadoni.</p>
 				    	</blockquote>
 				    </div>
 				    <div class="active item">
                         <div class="profile-circle" style="background-color: rgba(145,169,216,.2);"></div>
 				    	<blockquote>
-				    		<p>I am lucky to have my training in this institution. Thanks to the bankersadda through which I came to know about this coaching class. In addition doing practice in the class apart from teaching gives me an immense confidence. Overall this is an excellent coaching institute to recommend others. My heartfelt thanks to ” The Career Power” & “The Bankersadda.</p>
+				    		<p>I am lucky to have my training in this institution. Thanks to the bankersadda through which I came to know about this coaching class. In addition doing practice in the class apart from teaching gives me an immense confidence. Overall this is an excellent coaching institute to recommend others. My heartfelt thanks to ” The Vbcadoni” & “The Bankersadda.</p>
 				    	</blockquote>
-				    </div>
-                    <div class="item">
-                        <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-    			    	<blockquote>
-				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-				    	</blockquote>
-				    </div>
-                    <div class="item">
-                        <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-    			    	<blockquote>
-				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-				    	</blockquote>
-				    </div>
-                    <div class="item">
-                        <div class="profile-circle" style="background-color: rgba(77,5,51,.2);"></div>
-    			    	<blockquote>
-				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
-				    	</blockquote>
-				    </div>
+				    </div>                    
 				  </div>
 				</div>
 			</div>							
@@ -327,86 +303,10 @@
         </div>
     </div> <!-- End product widget area -->
     
-    <div class="footer-top-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-about-us">
-                        <h2>e<span>Xam</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
-                        <div class="footer-social">
-                            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-menu">
-                        <h2 class="footer-wid-title">User Navigation </h2>
-                        <ul>
-                            <li><a href="#">My account</a></li>
-                            <li><a href="#">Order history</a></li>
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Vendor contact</a></li>
-                            <li><a href="#">Front page</a></li>
-                        </ul>                        
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-menu">
-                        <h2 class="footer-wid-title">Courses</h2>
-                        <ul>
-                            <li><a href="#">BANK</a></li>
-                            <li><a href="#">SSC CGL</a></li>
-                            <li><a href="#">UPSC</a></li>
-                            <li><a href="#">UPTU</a></li>
-                            <li><a href="#">DU</a></li>
-                        </ul>                        
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-newsletter">
-                        <h2 class="footer-wid-title">Newsletter</h2>
-                        <p>Sign up to our newsletter and get exclusive offers you wont find anywhere else straight to your inbox!</p>
-                        <div class="newsletter-form">
-                            <form action="#">
-                                <input type="email" placeholder="Type your email">
-                                <input type="submit" value="Subscribe">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End footer top area -->
+    <?php include('include/footer.php');?>
+    <!-- End footer top area -->
     
-    <div class="footer-bottom-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="copyright">
-                        <p>&copy; 2017 VBCADONI. All Rights Reserved.</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="footer-card-icon">
-                        <i class="fa fa-cc-discover"></i>
-                        <i class="fa fa-cc-mastercard"></i>
-                        <i class="fa fa-cc-paypal"></i>
-                        <i class="fa fa-cc-visa"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End footer bottom area -->
+    <!-- End footer bottom area -->
     <script src="https://code.jquery.com/jquery.min.js"></script>    
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
     <script src="<?php echo base_url();?>userassets/js/owl.carousel.min.js"></script>
